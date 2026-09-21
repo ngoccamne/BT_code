@@ -7,6 +7,9 @@
 #include "stdint.h"
 #include "avr/io.h"
 
+#define NUM_OF_PORTS           4
+#define NUM_OF_PINS_PER_PORT   8
+
 #define PORTA_ID			   0
 #define PORTB_ID			   1
 #define PORTC_ID			   2
