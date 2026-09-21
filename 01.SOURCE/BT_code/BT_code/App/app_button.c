@@ -4,19 +4,26 @@
 
 #include "app_button.h"
 
-void app_button_init(uint8_t port_num, uint8_t pin_num)
+static uint8_t state = BUTTON_RELEASED;
+
+void app_button_init()
 {
-	bsp_button_init(port_num, pin_num);
+	bsp_button_init(BUTTON_PORT_ID, BUTTON_PIN_ID);
 }
 
-uint8_t app_button_get_state(uint8_t port_num, uint8_t pin_num)
+void app_button_update(void)
 {
-	if (bsp_button_get_state(port_num, pin_num))
+	if (bsp_button_get_state(BUTTON_PORT_ID, BUTTON_PIN_ID))
 	{
-		return BUTTON_RELEASED;
+		state = BUTTON_RELEASED;
 	}
 	else
 	{
-		return BUTTON_PRESSED;
+		state = BUTTON_PRESSED;
 	}
+}
+
+uint8_t app_button_get_state(void)
+{
+	return state;
 }

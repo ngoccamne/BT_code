@@ -4,19 +4,21 @@
 
 #include "app_led.h"
 
-void app_led_init(uint8_t port_num, uint8_t pin_num)
+void app_led_init()
 {
-	bsp_led_init(port_num, pin_num);
+	bsp_led_init(LED_PORT_ID, LED_PIN_ID);
 }
 
-void app_led_update(uint8_t port_num, uint8_t pin_num, uint8_t state)
+void app_led_update()
 {
-	if (state == LED_ON)
+	uint8_t button_state = app_button_get_state();
+	
+	if (button_state == BUTTON_PRESSED)
 	{
-		bsp_led_on(port_num, pin_num);
+		bsp_led_on(LED_PORT_ID, LED_PIN_ID);
 	}
 	else
 	{
-		bsp_led_off(port_num, pin_num);
+		bsp_led_off(LED_PORT_ID, LED_PIN_ID);
 	}
 }

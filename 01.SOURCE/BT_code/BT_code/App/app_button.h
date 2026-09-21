@@ -11,7 +11,8 @@
 #define		BUTTON_PRESSED		1
 #define		BUTTON_RELEASED 	0
 
-void app_button_init(uint8_t port_num, uint8_t pin_num);
-uint8_t app_button_get_state(uint8_t port_num, uint8_t pin_num);
+void app_button_init();
+void app_button_update(void);
+uint8_t app_button_get_state(void);
 
 #endif
