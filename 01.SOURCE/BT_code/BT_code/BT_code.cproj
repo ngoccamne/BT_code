@@ -135,6 +135,9 @@
     <Compile Include="App\main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="BSP\board.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="BSP\bsp_button.c">
       <SubType>compile</SubType>
     </Compile>
