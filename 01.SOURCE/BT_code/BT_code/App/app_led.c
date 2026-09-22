@@ -13,11 +13,11 @@ void app_led_update()
 {
 	uint8_t button_state = app_button_get_state();
 	
-	if (button_state == BUTTON_PRESSED)
+	if (BUTTON_PRESSED == button_state)
 	{
 		bsp_led_on(LED_PORT_ID, LED_PIN_ID);
 	}
-	else
+	else if (BUTTON_RELEASED == button_state)
 	{
 		bsp_led_off(LED_PORT_ID, LED_PIN_ID);
 	}

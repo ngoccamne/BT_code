@@ -20,10 +20,10 @@
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress />
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
     <UncachedRange />
     <preserveEEPROM>true</preserveEEPROM>
-    <OverrideVtorValue />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
     <ResetRule>0</ResetRule>
     <eraseonlaunchrule>0</eraseonlaunchrule>
@@ -103,6 +103,7 @@
       <Value>../Driver/Components</Value>
       <Value>../Driver/Devices</Value>
       <Value>../test</Value>
+      <Value>../MiddleWare</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -131,6 +132,12 @@
     <Compile Include="App\app_button.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="App\app_dht.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\app_dht.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="App\app_led.c">
       <SubType>compile</SubType>
     </Compile>
@@ -149,16 +156,46 @@
     <Compile Include="BSP\bsp_button.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="BSP\bsp_dht.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BSP\bsp_dht.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BSP\bsp_lcd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BSP\bsp_lcd.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="BSP\bsp_led.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="BSP\bsp_led.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="BSP\bsp_timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BSP\bsp_timer.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Driver\Components\gpio.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Driver\Components\gpio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Driver\Devices\lcd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Driver\Devices\lcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MiddleWare\sys_time.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MiddleWare\sys_time.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="test\test_gpio.c">
@@ -171,6 +208,7 @@
     <Folder Include="Driver" />
     <Folder Include="Driver\Components" />
     <Folder Include="Driver\Devices" />
+    <Folder Include="MiddleWare" />
     <Folder Include="test" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
