@@ -20,7 +20,6 @@ int main(void)
 	
 	printf("HELLO SANG");
 	
-	
 	app_button_init();
 	app_led_init();
 	// uart_init();
