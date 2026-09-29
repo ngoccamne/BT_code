@@ -3,6 +3,7 @@
  */ 
 
 #include "lcd.h"
+#include "bsp_lcd.h"
 
 #ifndef LCD_WEAK
 #if defined(__GNUC__)
@@ -15,15 +16,15 @@
 #endif
 #endif
 
-LCD_WEAK void lcd_rs_high(void) { (void)0; }
-LCD_WEAK void lcd_rs_low(void)  { (void)0; }
-LCD_WEAK void lcd_en_high(void) { (void)0; }
-LCD_WEAK void lcd_en_low(void)  { (void)0; }
+//LCD_WEAK void lcd_rs_high(void) { (void)0; }
+//LCD_WEAK void lcd_rs_low(void)  { (void)0; }
+//LCD_WEAK void lcd_en_high(void) { (void)0; }
+//LCD_WEAK void lcd_en_low(void)  { (void)0; }
 
-LCD_WEAK void lcd_write_bus4(uint8_t nibble)
-{
-	(void)nibble;
-}
+//LCD_WEAK void lcd_write_bus4(uint8_t nibble)
+//{
+	//(void)nibble;
+//}
 
 static void lcd_pulse_enable(void)
 {
