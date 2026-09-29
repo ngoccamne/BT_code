@@ -5,6 +5,8 @@
 #define BSP_LCD_H_
 
 #include <stdint.h>
+#include "gpio.h"
+#include <avr/io.h>
 
 #define LCD_PORT				PORTA
 #define LCD_CONTROL_PORT		PORTA
@@ -19,5 +21,12 @@
 #define D7						PA7
 
 void bsp_lcd_init(void);
+void lcd_rs_high(void);
+void lcd_rs_low(void);
+void lcd_en_high(void);
+void lcd_en_low(void);
+void lcd_write_bus4(uint8_t nibble);
+void lcd_delay_ms(uint16_t ms);
+void lcd_delay_us(uint16_t us);
 
 #endif /* BSP_LCD_H_ */
