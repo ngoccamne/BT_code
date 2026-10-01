@@ -199,6 +199,12 @@
     <Compile Include="BSP\bsp_timer.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="BSP\bsp_uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BSP\bsp_uart.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Driver\Components\gpio.c">
       <SubType>compile</SubType>
     </Compile>
@@ -223,6 +229,12 @@
     <Compile Include="Driver\Devices\lcd.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MiddleWare\printf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MiddleWare\printf.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="MiddleWare\ring_buffer.c">
       <SubType>compile</SubType>
     </Compile>
@@ -236,6 +248,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="test\test_ring_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="test\test_ring_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="test\test_runner.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

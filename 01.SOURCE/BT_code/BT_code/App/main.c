@@ -13,14 +13,11 @@
 #include "sys_time.h"
 #include "lcd.h"
 #include "app_dht.h"
+#include "test_ring_buffer.h"
 
 int main(void)
 {
 	sys_time_init();
-	
-	printf("HELLO SANG");
-	
-	
 	app_button_init();
 	app_led_init();
 	// uart_init();
@@ -30,10 +27,10 @@ int main(void)
 	
     while (1) 
     {
-		app_dht_update();
-		app_button_update();
-		app_led_update();
-		app_lcd_update();
+		//app_dht_update();
+		//app_button_update();
+		//app_led_update();
+		//app_lcd_update();
     }
 }
 

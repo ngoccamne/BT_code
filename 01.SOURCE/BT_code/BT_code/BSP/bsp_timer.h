@@ -2,8 +2,8 @@
  * bsp_timer.h
  */ 
 
-#ifndef BSP_BUTTON_H_
-#define BSP_BUTTON_H_
+#ifndef BSP_TIMER_H_
+#define BSP_TIMER_H_
 
 #include <stdint.h>
 
