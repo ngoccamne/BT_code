@@ -13,14 +13,14 @@
 #include "sys_time.h"
 #include "lcd.h"
 #include "app_dht.h"
-#include "test_ring_buffer.h"
+#include "app_uart.h"
 
 int main(void)
 {
 	sys_time_init();
 	app_button_init();
 	app_led_init();
-	// uart_init();
+	app_uart_init();
 	app_dht_init();
 	app_lcd_init();
 	sei();
@@ -31,6 +31,7 @@ int main(void)
 		//app_button_update();
 		//app_led_update();
 		//app_lcd_update();
+		app_uart_update();
     }
 }
 

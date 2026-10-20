@@ -1,8 +1,5 @@
 /*
  * uart.c
- *
- * Created: 9/8/2026 2:33:37 PM
- *  Author: NGOC CAM
  */ 
 
 #include "uart.h"
@@ -38,4 +35,14 @@ void uart_send_string(const char *str)
 	{
 		uart_transmit(*str++);
 	}
+}
+
+void uart0_tx_interrupt_enable(void)
+{
+	UCSR0B |= 1 << UDRIE0;
+}
+
+void uart1_tx_interrupt_enable(void)
+{
+	UCSR1B |= 1 << UDRIE1;
 }

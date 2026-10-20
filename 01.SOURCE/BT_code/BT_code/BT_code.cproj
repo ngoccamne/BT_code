@@ -163,6 +163,12 @@
     <Compile Include="App\app_led.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="App\app_uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="App\app_uart.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="App\main.c">
       <SubType>compile</SubType>
     </Compile>
@@ -247,13 +253,16 @@
     <Compile Include="MiddleWare\sys_time.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="test\test_ring_buffer.c">
+    <Compile Include="Sys\Scheduler\scheduler.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="test\test_ring_buffer.h">
+    <Compile Include="Sys\Scheduler\scheduler.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="test\test_runner.c">
+    <Compile Include="test\test_ring_buffer\avr_compat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="test\test_ring_buffer\test_ring_buffer.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
@@ -264,7 +273,10 @@
     <Folder Include="Driver\Components" />
     <Folder Include="Driver\Devices" />
     <Folder Include="MiddleWare" />
+    <Folder Include="Sys" />
+    <Folder Include="Sys\Scheduler" />
     <Folder Include="test" />
+    <Folder Include="test\test_ring_buffer" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

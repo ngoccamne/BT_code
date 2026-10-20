@@ -31,7 +31,7 @@ bool ring_buffer_empty(volatile ring_buffer_t* rb)
 
 bool ring_buffer_push(char data, volatile ring_buffer_t* rb)
 {
-	if (1 == ring_buffer_full(&rb))
+	if (ring_buffer_full(rb) == 1)
 	{
 		return 0;
 	}
@@ -46,7 +46,7 @@ bool ring_buffer_push(char data, volatile ring_buffer_t* rb)
 
 char ring_buffer_pop(volatile ring_buffer_t* rb)
 {
-	if (1 == ring_buffer_empty(&rb))
+	if (1 == ring_buffer_empty(rb))
 	{
 		return 0;
 	}

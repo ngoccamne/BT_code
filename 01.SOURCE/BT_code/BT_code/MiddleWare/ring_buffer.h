@@ -5,8 +5,14 @@
 #ifndef RING_BUFFER_H_
 #define RING_BUFFER_H_
 
-#include <util/atomic.h>
 #include <stdbool.h>
+#include <stdint.h>
+
+#ifdef _WIN32
+#include "../test/test_ring_buffer/avr_compat.h"
+#else
+#include <util/atomic.h>
+#endif
 
 #define RBUFFER_SIZE	4
 #define	FULL			0
